@@ -26,12 +26,10 @@
 
 <div>
 <h3>Further Description of this Repository</h3>
-
-<p>[Any narrative content may be provided here by the TC, for example, if the Members wish to provide an extended statement of purpose.]</p>
+<p>This repository provides tools for producing JSON Schema documents for validating OData JSON request and response bodies.</p>
 </div>
 
 <div>
-
 <h3>Contact</h3>
 <p>Please send questions or comments about <a href="https://www.oasis-open.org/resources/tcadmin/github-repositories-for-oasis-tc-members-chartered-work">OASIS TC GitHub repositories</a> to <a href="mailto:robin@oasis-open.org">Robin Cover</a> and <a href="mailto:chet.ensign@oasis-open.org">Chet Ensign</a>.  For questions about content in this repository, please contact the TC Chair or Co-Chairs as listed on the the OData TC's <a href="https://www.oasis-open.org/committees/odata/">home page</a>.</p>
 </div>
