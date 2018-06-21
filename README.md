@@ -24,14 +24,13 @@
 <p>Please see the <a href="https://github.com/oasis-tcs/odata-json-schema/blob/master/LICENSE.md">LICENSE</a> file for description of the license terms and OASIS policies applicable to the TC's work in this GitHub project. Content in this repository is intended to be part of the OData TC's permanent record of activity, visible and freely available for all to use, subject to applicable OASIS policies, as presented in the repository <a href="https://github.com/oasis-tcs/odata-json-schema/blob/master/LICENSE.md">LICENSE</a> file.</p>
 </div>
 
-<div>
+
 <h3>Further Description of this Repository</h3>
 
 The [`tools` folder](tools) contains tools for producing [JSON Schema](http://json-schema.org/) documents for validating [OData JSON](http://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html) request and response bodies.
 
 The [`examples` folder](examples) contains example [OData CSDL XML](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) ($metadata) files, JSON Schema documents produced from these OData CDSL XML files, and example OData JSON response bodies that can be validated with the produced JSON Schema documents.
 
-</div>
 
 <div>
 <h3>Contact</h3>
