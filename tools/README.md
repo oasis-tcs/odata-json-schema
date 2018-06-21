@@ -1,4 +1,4 @@
-# odata-json-schema
+# odata-json-schema Tools
 
 Tools for transforming [OData CSDL XML](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) ($metadata) files into JSON Schema documents.
 
