@@ -1,0 +1,9 @@
+{
+  "@odata.context": "$metadata#MainSupplier",
+  "ID": "ACME",
+  "Name": "Acme Corporation",
+  "Address": {
+    "Street": "Wonderway 42",
+    "City": "Megalopolis"
+  }
+}

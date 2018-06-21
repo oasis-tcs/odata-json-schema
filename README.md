@@ -26,7 +26,11 @@
 
 <div>
 <h3>Further Description of this Repository</h3>
-<p>This repository provides tools for producing JSON Schema documents for validating OData JSON request and response bodies.</p>
+
+The [`tools` folder](tools) contains tools for producing [JSON Schema](http://json-schema.org/) documents for validating [OData JSON](http://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html) request and response bodies.
+
+The [`examples` folder](examples) contains example [OData CSDL XML](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) ($metadata) files, JSON Schema documents produced from these OData CDSL XML files, and example OData JSON response bodies that can be validated with the produced JSON Schema documents.
+
 </div>
 
 <div>

@@ -1,0 +1,1089 @@
+{
+    "$id": "OData.Demo",
+    "$schema": "https://oasis-tcs.github.io/odata-json-schema/tools/odata-meta-schema.json#",
+    "odata-version": "4.0",
+    "anyOf": [
+        {
+            "description": "Customers: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Customers([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Customer"
+                }
+            ]
+        },
+        {
+            "description": "Customers: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Customers([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Customer"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Suppliers: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Suppliers([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Supplier"
+                }
+            ]
+        },
+        {
+            "description": "Suppliers: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Suppliers([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Supplier"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Products: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Products([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Product"
+                }
+            ]
+        },
+        {
+            "description": "Products: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Products([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Product"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Orders: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Orders([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Order"
+                }
+            ]
+        },
+        {
+            "description": "Orders: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Orders([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Order"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Categories: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Categories([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Category"
+                }
+            ]
+        },
+        {
+            "description": "Categories: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Categories([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Category"
+                    }
+                }
+            }
+        },
+        {
+            "description": "OrderItems: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#OrderItems([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.OrderItem"
+                }
+            ]
+        },
+        {
+            "description": "OrderItems: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#OrderItems([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.OrderItem"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Sales: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Sales([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Sales"
+                }
+            ]
+        },
+        {
+            "description": "Sales: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Sales([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Employees: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Employees([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Employee"
+                }
+            ]
+        },
+        {
+            "description": "Employees: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Employees([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Employee"
+                    }
+                }
+            }
+        },
+        {
+            "description": "LeaveRequests: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#LeaveRequests([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.LeaveRequest"
+                }
+            ]
+        },
+        {
+            "description": "LeaveRequests: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#LeaveRequests([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.LeaveRequest"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Countries: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Countries([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Country"
+                }
+            ]
+        },
+        {
+            "description": "Countries: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Countries([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Country"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Time: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Time([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Time"
+                }
+            ]
+        },
+        {
+            "description": "Time: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Time([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Time"
+                    }
+                }
+            }
+        },
+        {
+            "description": "SalesOrganizations: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#SalesOrganizations([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.SalesOrganization"
+                }
+            ]
+        },
+        {
+            "description": "SalesOrganizations: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#SalesOrganizations([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.SalesOrganization"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Currencies: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Currencies([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Currency"
+                }
+            ]
+        },
+        {
+            "description": "Currencies: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Currencies([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Currency"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Cities: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Cities([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.City"
+                }
+            ]
+        },
+        {
+            "description": "Cities: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Cities([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.City"
+                    }
+                }
+            }
+        }
+    ],
+    "definitions": {
+        "OData.Demo.Customer": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Orders": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Order"
+                    }
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "CompanyName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "BirthDate": {
+                    "type": "string"
+                },
+                "CountryName": {
+                    "type": "string",
+                    "description": "This is weird, given that we have a Country entity type"
+                },
+                "Sales": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                },
+                "ContactName": {
+                    "type": "string"
+                },
+                "ContactTitle": {
+                    "type": "string"
+                },
+                "Fax": {
+                    "type": "string"
+                },
+                "Address": {
+                    "$ref": "#/definitions/OData.Demo.Address"
+                },
+                "EmailAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Phone": {
+                    "$ref": "#/definitions/OData.Demo.PhoneNumber"
+                }
+            }
+        },
+        "OData.Demo.Supplier": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Product"
+                    }
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "EmailAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Addresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Address"
+                    }
+                }
+            }
+        },
+        "OData.Demo.Product": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Category": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Category"
+                        }
+                    ]
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Supplier": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Supplier"
+                        }
+                    ]
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "Thumbnail": {
+                    "type": "string"
+                },
+                "Sizes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Rating": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "OrderItems": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.OrderItem"
+                    }
+                },
+                "ReleaseDate": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "DiscontinuedDate": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "date"
+                },
+                "LifeTime": {
+                    "type": "string"
+                },
+                "Color": {
+                    "type": "string"
+                },
+                "TaxRate": {
+                    "type": [
+                        "number",
+                        "string",
+                        "null"
+                    ],
+                    "format": "decimal",
+                    "multipleOf": 1e-6,
+                    "minimum": -9999.999999,
+                    "maximum": 9999.999999
+                },
+                "Sales": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                }
+            }
+        },
+        "OData.Demo.Order": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.OrderItem"
+                    }
+                },
+                "Completed": {
+                    "type": "boolean"
+                },
+                "Customer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Customer"
+                        }
+                    ]
+                },
+                "ShippingAddress": {
+                    "$ref": "#/definitions/OData.Demo.Address"
+                }
+            }
+        },
+        "OData.Demo.VipCustomer": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Customer"
+                }
+            ]
+        },
+        "OData.Demo.Category": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Amount": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "format": "decimal",
+                    "multipleOf": 1
+                },
+                "Products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Product"
+                    }
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Thumbnail": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.OrderItem": {
+            "type": "object",
+            "properties": {
+                "OrderID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ItemID": {
+                    "type": "string"
+                },
+                "Order": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Order"
+                        }
+                    ]
+                },
+                "Size": {
+                    "type": "string"
+                },
+                "Price": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "format": "decimal",
+                    "multipleOf": 1
+                },
+                "Product": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Product"
+                        }
+                    ]
+                },
+                "Currency": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Currency"
+                        }
+                    ]
+                }
+            }
+        },
+        "OData.Demo.Sales": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Amount": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "format": "decimal",
+                    "multipleOf": 1
+                },
+                "Time": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Time"
+                        }
+                    ]
+                },
+                "Currency": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Currency"
+                        }
+                    ]
+                },
+                "Customer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Customer"
+                        }
+                    ]
+                },
+                "SalesOrganization": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.SalesOrganization"
+                        }
+                    ]
+                },
+                "Product": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Product"
+                        }
+                    ]
+                }
+            }
+        },
+        "OData.Demo.Employee": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Title": {
+                    "type": "string"
+                },
+                "Manager": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Manager"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "LeaveRequests": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.LeaveRequest"
+                    }
+                }
+            }
+        },
+        "OData.Demo.LeaveRequest": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Manager": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Manager"
+                        }
+                    ]
+                },
+                "Employee": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Employee"
+                        }
+                    ]
+                }
+            }
+        },
+        "OData.Demo.Address": {
+            "type": "object",
+            "properties": {
+                "Street": {
+                    "type": "string"
+                },
+                "Country": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Country"
+                        }
+                    ]
+                },
+                "City": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.City"
+                        }
+                    ]
+                },
+                "Region": {
+                    "type": "string"
+                },
+                "PostalCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.AddressWithLocation": {
+            "type": "object",
+            "properties": {
+                "Location": {
+                    "$ref": "https://oasis-tcs.github.io/odata-json-schema/tools/odata-meta-schema.json#/definitions/Edm.GeographyPoint"
+                }
+            }
+        },
+        "OData.Demo.Country": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Continent": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.PreferredSupplier": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Supplier"
+                }
+            ],
+            "properties": {
+                "AccountRepresentative": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.Employee"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "EmployeeID": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.Pattern": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "Yellow",
+                        "Solid"
+                    ]
+                },
+                {
+                    "type": "string",
+                    "pattern": "^(Yellow|Solid|[1-9][0-9]*)(,(Yellow|Solid|[1-9][0-9]*))*$"
+                }
+            ]
+        },
+        "OData.Demo.Manager": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/OData.Demo.Employee"
+                }
+            ],
+            "properties": {
+                "Employees": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Employee"
+                    }
+                },
+                "Inbox": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.LeaveRequest"
+                    }
+                }
+            }
+        },
+        "OData.Demo.Time": {
+            "type": "object",
+            "properties": {
+                "Date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "Year": {
+                    "type": "string",
+                    "maxLength": 4
+                },
+                "Quarter": {
+                    "type": "string"
+                },
+                "Month": {
+                    "type": "string"
+                },
+                "Sales": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                }
+            }
+        },
+        "OData.Demo.SalesOrganization": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Sales": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                },
+                "Superordinate": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/OData.Demo.SalesOrganization"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            }
+        },
+        "OData.Demo.Currency": {
+            "type": "object",
+            "properties": {
+                "Code": {
+                    "type": "string",
+                    "maxLength": 3
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "Sales": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OData.Demo.Sales"
+                    }
+                },
+                "Symbol": {
+                    "type": "string"
+                },
+                "FractionalDigits": {
+                    "type": "integer",
+                    "format": "uint8"
+                }
+            }
+        },
+        "OData.Demo.City": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "Name": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.PhoneNumber": {
+            "type": "object",
+            "properties": {
+                "Number": {
+                    "type": "string"
+                },
+                "Type": {
+                    "type": "string"
+                }
+            }
+        },
+        "OData.Demo.CellPhoneNumber": {
+            "type": "object",
+            "properties": {
+                "Carrier": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

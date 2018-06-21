@@ -1,0 +1,18 @@
+{
+  "@odata.context":"$metadata#Products/$entity",
+  "ID":"WONDER01",
+  "Description":null,
+  "ReleaseDate":"2014-10-23",
+  "DiscontinuedDate":"2014-10-24",
+  "Rating":10,
+  "Price":314,
+  "Currency":"EUR",
+  "Category":{
+    "ID":1
+  },
+  "Supplier":{
+    "Address":{
+      "City":"Heidelberg"
+    }
+  }
+}

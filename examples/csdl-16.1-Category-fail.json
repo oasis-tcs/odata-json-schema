@@ -1,0 +1,17 @@
+{
+  "@odata.context" : "$metadata#Categories/$entity",
+  "ID" : 1,
+  "Name" : "The most wonderful products",
+  "Products" : [{
+      "ID" : "1",
+      "Description" : "WONDER01",
+      "Supplier" : {
+        "ID" : "1",
+        "Products" : [{
+            "ID" : 1
+          }
+        ]
+      }
+    }
+  ]
+}

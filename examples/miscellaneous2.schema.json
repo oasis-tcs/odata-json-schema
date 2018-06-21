@@ -1,0 +1,110 @@
+{
+    "$id": "org.example2",
+    "$schema": "https://oasis-tcs.github.io/odata-json-schema/tools/odata-meta-schema.json#",
+    "odata-version": "4.0",
+    "anyOf": [
+        {
+            "description": "Waldos: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Waldos([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Schema.Two.Waldo"
+                }
+            ]
+        },
+        {
+            "description": "Waldos: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Waldos([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Schema.Two.Waldo"
+                    }
+                }
+            }
+        },
+        {
+            "description": "Freds: single entity",
+            "type": "object",
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Freds([/(][^\\$]*)?/\\$entity$"
+                }
+            },
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Schema.Two.Fred"
+                }
+            ]
+        },
+        {
+            "description": "Freds: collection of entities",
+            "type": "object",
+            "required": [
+                "value"
+            ],
+            "properties": {
+                "@odata.context": {
+                    "type": "string",
+                    "pattern": "\\$metadata#Freds([/(][^\\$]*)?$"
+                },
+                "value": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Schema.Two.Fred"
+                    }
+                }
+            }
+        }
+    ],
+    "definitions": {
+        "Schema.One.Waldo": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                }
+            }
+        },
+        "Schema.Two.Waldo": {
+            "type": "object",
+            "properties": {
+                "Fred": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "Schema.Two.Fred": {
+            "type": "object",
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Waldos": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Schema.Two.Waldo"
+                    }
+                }
+            }
+        }
+    }
+}

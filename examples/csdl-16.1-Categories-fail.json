@@ -1,0 +1,17 @@
+{
+  "@odata.context": "$metadata#Categories",
+  "the values": [
+    {
+      "ID": 1,
+      "Name": "The most wonderful products"
+    },
+    {
+      "ID": 2,
+      "Name": "Very nice products"
+    },
+    {
+      "ID": 3,
+      "Name": "Reasonable products"
+    }
+  ]
+}
