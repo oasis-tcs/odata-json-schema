@@ -29,7 +29,7 @@ File | Description
 
 ## ExampleService
 
-A more elaborate example
+A more elaborate example.
 
 File | Description
 -----|------------
@@ -39,7 +39,7 @@ File | Description
 
 ## miscellaneous
 
-A collection of examples from the [OData CSDL XML specification](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html)
+A collection of examples from the [OData CSDL XML specification](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html).
 
 File | Description
 -----|------------
@@ -48,7 +48,7 @@ File | Description
 
 ## miscellaneous2
 
-More examples from the [OData CSDL XML specification](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html)
+More examples from the [OData CSDL XML specification](http://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html).
 
 File | Description
 -----|------------
