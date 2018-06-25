@@ -345,7 +345,7 @@
           <xsl:with-param name="type" select="'string'" />
           <xsl:with-param name="nullable" select="$nullable" />
         </xsl:call-template>
-        <xsl:text>,"format":"time"</xsl:text>
+        <xsl:text>,"format":"partial-time"</xsl:text>
       </xsl:when>
       <xsl:when test="$singleType='Edm.Duration'">
         <xsl:call-template name="nullableType">
