@@ -926,7 +926,7 @@
                         "string",
                         "null"
                     ],
-                    "format": "time",
+                    "format": "partial-time",
                     "default": "07:59:59.999"
                 },
                 "GuidValue": {
@@ -1066,7 +1066,7 @@
                 },
                 "TimeOfDayValue": {
                     "type": "string",
-                    "format": "time",
+                    "format": "partial-time",
                     "default": "07:59:59.999"
                 },
                 "GuidValue": {
