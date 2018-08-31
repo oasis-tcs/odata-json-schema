@@ -232,7 +232,8 @@
           <xsl:when test="not(@Scale) or @Scale='0'">
             <xsl:text>,"multipleOf":1</xsl:text>
           </xsl:when>
-          <xsl:when test="@Scale!='variable' and @Scale!='floating'">
+          <!-- Note: Variable is invalid but used by Dynamics CRM -->
+          <xsl:when test="@Scale!='Variable' and @Scale!='variable' and @Scale!='floating'">
             <xsl:text>,"multipleOf":1e-</xsl:text>
             <xsl:value-of select="@Scale" />
           </xsl:when>
