@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns:edm="http://docs.oasis-open.org/odata/ns/edm" xmlns:json="http://json.org/"
->
+<?xml version="1.0" encoding="utf-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns:edm="http://docs.oasis-open.org/odata/ns/edm" xmlns:json="http://json.org/">
   <!--
     This style sheet transforms OData 4.0 and 4.01 CSDL XML documents into JSON Schema Draft 07
 
@@ -17,8 +15,7 @@
 
   <xsl:variable name="edmUri" select="'https://oasis-tcs.github.io/odata-json-schema/tools/odata-meta-schema.json'" />
   <xsl:variable name="coreNamespace" select="'Org.OData.Core.V1'" />
-  <xsl:variable name="coreAlias"
-    select="//edmx:Include[@Namespace=$coreNamespace]/@Alias|//edm:Schema[@Namespace=$coreNamespace]/@Alias" />
+  <xsl:variable name="coreAlias" select="//edmx:Include[@Namespace=$coreNamespace]/@Alias|//edm:Schema[@Namespace=$coreNamespace]/@Alias" />
   <xsl:variable name="coreDescription" select="concat('@',$coreNamespace,'.Description')" />
   <xsl:variable name="coreDescriptionAliased" select="concat('@',$coreAlias,'.Description')" />
 
@@ -52,12 +49,9 @@
 
   <xsl:template match="edmx:DataServices">
     <xsl:apply-templates select="edm:Schema/edm:EntityContainer" />
-    <xsl:apply-templates
-      select="edm:Schema/edm:EntityType|edm:Schema/edm:ComplexType|edm:Schema/edm:TypeDefinition|edm:Schema/edm:EnumType" mode="hash"
-    >
+    <xsl:apply-templates select="edm:Schema/edm:EntityType|edm:Schema/edm:ComplexType|edm:Schema/edm:TypeDefinition|edm:Schema/edm:EnumType" mode="hash">
       <xsl:with-param name="name" select="'definitions'" />
     </xsl:apply-templates>
-
   </xsl:template>
 
   <xsl:template match="edm:EnumType" mode="hashpair">
@@ -581,9 +575,7 @@
         <xsl:value-of select="." />
         <xsl:text>"</xsl:text>
       </xsl:when>
-      <xsl:when
-        test="$underlyingType='Edm.Boolean' or $underlyingType='Edm.Decimal' or $underlyingType='Edm.Double' or $underlyingType='Edm.Single' or $underlyingType='Edm.Byte' or $underlyingType='Edm.SByte' or $underlyingType='Edm.Int16' or $underlyingType='Edm.Int32' or $underlyingType='Edm.Int64'"
-      >
+      <xsl:when test="$underlyingType='Edm.Boolean' or $underlyingType='Edm.Decimal' or $underlyingType='Edm.Double' or $underlyingType='Edm.Single' or $underlyingType='Edm.Byte' or $underlyingType='Edm.SByte' or $underlyingType='Edm.Int16' or $underlyingType='Edm.Int32' or $underlyingType='Edm.Int64'">
         <xsl:value-of select="." />
       </xsl:when>
       <!-- FAKE: couldn't determine underlying primitive type, so guess from value -->
@@ -883,6 +875,10 @@
     <xsl:text>"TODO:text()":"</xsl:text>
     <xsl:value-of select="." />
     <xsl:text>"</xsl:text>
+  </xsl:template>
+
+  <!-- leftover attributes -->
+  <xsl:template match="@*">
   </xsl:template>
 
   <!-- helper functions -->
